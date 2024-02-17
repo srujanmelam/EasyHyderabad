@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive UI with AngularJS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body ng-controller="MainController">
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">{{ appName }}</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <!-- Add any additional links here -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <button
+            class="btn btn-primary btn-block mb-3"
+            ng-click="checkBuses()"
+          >
+            Check Buses
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button
+            class="btn btn-primary btn-block mb-3"
+            ng-click="checkMetro()"
+          >
+            Check Metro
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button
+            class="btn btn-primary btn-block mb-3"
+            ng-click="placesToVisit()"
+          >
+            Places to Visit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted">Feel free to mail queries<a ng-href="mailto:{{email}}"> email me!! </a></span>
+        
+      </div>
+    </footer>
+  </body>
+</html>

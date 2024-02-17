@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Route</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body ng-controller="MainController">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">{{ appName }}</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <!-- Add any additional links here -->
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+    <!-- Main content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form ng-submit="showBuses()">
+                    <div class="form-group">
+                        <label for="fromInput">From</label>
+                        <input type="text" class="form-control" id="fromInput" ng-model="from" placeholder="From">
+                    </div>
+                    <div class="form-group">
+                        <label for="toInput">To</label>
+                        <input type="text" class="form-control" id="toInput" ng-model="to" placeholder="To">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Show Buses</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-5" ng-if="availableBuses && availableBuses.length > 0">
+            <div class="col-md-6 offset-md-3">
+                <h3>Available Buses:</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="bus in availableBuses">{{ bus.busName }}</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+ <!-- Footer -->
+ <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">Feel free to mail queries<a ng-href="mailto:{{email}}"> email me!! </a></span>
+    </div>
+  </footer>
+</body>
+</html>
