@@ -38,7 +38,7 @@ app.controller("MainController", function ($scope,$window) {
   $scope.checkBuses = () => {
     // Implement your logic for checking buses
     console.log("Entered Buses Page");
-    $window.location.href = "index.html";
+    $window.location.href = "buses.html";
   };
   $scope.findRoutes = ()=>{
     $window.location.href = "findRoutes.html";

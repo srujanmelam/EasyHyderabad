@@ -42,17 +42,17 @@
         <div class="col-md-4">
           <button
             class="btn btn-primary btn-block mb-3"
-            ng-click="findRoutes()"
+            ng-click="checkBuses()"
           >
-            Find Routes
+            Check Buses
           </button>
         </div>
         <div class="col-md-4">
           <button
             class="btn btn-primary btn-block mb-3"
-            ng-click="findBuses()"
+            ng-click="checkMetro()"
           >
-            Find Buses
+            Check Metro
           </button>
         </div>
         <div class="col-md-4">
@@ -70,20 +70,8 @@
     <footer class="footer mt-auto py-3 bg-light">
       <div class="container">
         <span class="text-muted">Feel free to mail queries<a ng-href="mailto:{{email}}"> email me!! </a></span>
+        
       </div>
     </footer>
   </body>
 </html>
-
-
-<!-- <h1>Bus Information</h1>
-
-    <div ng-repeat="(id, bus) in buses">
-        <h2>Bus Name: {{ bus.busName }}</h2>
-        <p>Bus ID: {{ bus.id }}</p>
-        <p>Stops:</p>
-        <ul>
-            <li ng-repeat="stop in bus.stops">{{ stop }}</li>
-        </ul>
-        <hr>
-    </div> -->
